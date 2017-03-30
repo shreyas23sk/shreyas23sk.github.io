@@ -99,7 +99,12 @@ p{
   background-color : #2196F3;
   text-align : center;
 }
-
+@media only screen and(max-width : 1024px){
+   min-height : 55vh;
+  padding-top : 15vh;
+  background-color : #2196F3;
+  text-align : center; 
+}
 /*WHY HIRE ME*/
 .why-heading{
   color : #212121;
