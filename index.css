@@ -1,144 +1,124 @@
-body{
-    margin: 0;
-    padding : 0;
-    border : none;
-    text-align: center;
-    font-family: corbel;
+/*
+ColorPalette
+DarkPrimary - #1976D2
+Primary #2196F3
+LightPrimary  : #BBDEFB
+Accent - #FF5722
+Text - #212121
+Secondary Text - #757575
+*/
+@keyframes dropHeader {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
-
+*{
+  font-family: 'Nunito', sans-serif;
+  margin : 0;
+}
+nav{
+  background-color : #FF5722;
+  font-size : 1.25em;
+}
 nav ul{
-    list-style-type: none;
-    overflow: hidden;
-    width: 100%;
-    margin : 0;
+  list-style-type: none;
+    margin: 0;
     padding: 0;
-    background-color:cornflowerblue;
-    position: fixed;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #ffc107;
+    display : flex;
+    justify-content : space-around;
+}
+@media only screen and (max-width : 768px){
+   nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #ffc107;
+    display : flex;
+    flex-direction : column;
+  }
 }
 nav ul li{
-    float: left
+  float : left;
+  margin: 16px;
 }
 nav ul li a{
-    text-decoration: none;
-    color : white;
-    border : none;
-    display : block;
-    padding : 14px 16px;
-    font-size: 18px;
+  text-decoration : none;
+  color : #212121;
 }
-nav ul li a:hover{
-    background-color: orange;
-    color : black;
+h1{
+  font-size : 4em;
+  color : white;
+  animation: 1s ease-out 0s 1 dropHeader;
+  padding-top :10vh;
 }
-a{
-    text-decoration: none;
-    color : black;
+p{
+  font-size : 1.5em;
+  line-height : 2;
 }
-#hero-full-screen {
-    top: 0;
-    background: #e0ebe8;
-    min-height: 55vh;
-    padding-top: 45vh;
-    
+/*Landing Page*/
+#landing-part{
+  text-align : center;
+  background-color :  #1976D2;
+  min-height : 55vh;
+  padding-top: 45vh;
 }
-#big{
-    font-size: 48px;
-    
+.main-heading{
+  float : left;
+  width : 50%;
 }
-#small{
-    font-size: 24px;
-}
-.projects {
-    display: flex;
-    flex : 1;
-    justify-content: space-around;
-    margin-top: 10vh;
-}
-
-#contact-me {
-    background: #e0ebe8;
+@media only screen and (max-width : 768px){
+  img{
+    width : 100vw;
+  }
+  .main-heading{
+    float : none;
+    width : 100%;
+    text-align : center;
+  }
 }
 
-#work {
-    padding-bottom: 50px;
+/*WHO AM I?*/
+#who-am-i{
+  min-height : 55vh;
+  padding-top : 45vh;
+  background-color : #2196F3;
+  text-align : center;
 }
 
-
-
-button {
-    font-size: 24px;
-    padding : 30px 30px;
-    width : 40%;
-    border-radius : 20px;
-    background-color: #4099ff;
-    box-shadow: none;
-    display: inline;
-    margin-top : 20px;
-    margin-left : 20px;
-    margin-bottom: 40px;
+/*WHY HIRE ME*/
+.why-heading{
+  color : #212121;
 }
-
-.header {
-    padding : 50px;
+#why-hire-me{
+  min-height : 55vh;
+  padding-top : 15vh;
+  text-align  :center;
+  background-color : #BBDEFB;
+  padding-bottom : 20vh;
 }
-
-.flex {
-    display : flex;
-    justify-content: space-around;
+/*wanna hire me*/
+h2{
+  padding : 5vh;
 }
-
-p {
-    font-size: 18px;
-    max-width: 50%;
-    line-height: 25px;
+h2 a{
+  text-decoration : none;
+  color : white;
 }
-
-.my-image {
-    border-radius :  50%;
-    width : auto;
-    display: flex;
-    align-content: flex-end;
+h2 a:hover{
+  color : #212121;
 }
-
-/*Responsive design*/
-@media only screen and (max-width : 1024px){
-    #big{
-        font-size : 20px;
-    }
-    #small{
-        font-size: 16px;
-    }
-    .flex,.projects{
-        display : flex;
-        flex-direction: column;
-        align-content: space-around;
-    }
-    p{
-        font-size: 12px;
-        max-width : 100%;
-    }
-    button{
-        font-size: 16px;
-        padding : 30px 30px;
-        width : 40%;
-        border-radius : 20px;
-        background-color: #4099ff;
-        box-shadow: none;
-        display: inline;
-        margin-top : 20px;
-        margin-left : 20px;
-        margin-bottom: 40px;
-    }
-    nav ul li a{
-        text-decoration: none;
-        color : white;
-        border : none;
-        display : block;
-        padding : 14px 16px;
-        font-size: 12px''
-    }
-    img{
-        width : 30vw;
-        height : 20vh;
-    }
+#wanna-hire-me{
+  background-color : #2196F3;
+  min-height : 55vh;
+  padding-top: 25vh;
+  padding-bottom : 25vh;
+  text-align : center;
 }
